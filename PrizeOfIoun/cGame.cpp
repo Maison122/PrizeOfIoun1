@@ -204,13 +204,13 @@ void cGame::render(SDL_Window* theSDLWND, SDL_Renderer* theRenderer)
 	case END:
 	{
 		spriteBkgd.render(theRenderer, NULL, NULL, spriteBkgd.getSpriteScale());
-		tempTextTexture = theTextureManager->getTexture("");
+		tempTextTexture = theTextureManager->getTexture("TitleTxt");
 		pos = { 10, 10, tempTextTexture->getTextureRect().w, tempTextTexture->getTextureRect().h };
 		tempTextTexture->renderTexture(theRenderer, tempTextTexture->getTexture(), &tempTextTexture->getTextureRect(), &pos, scale);
-		tempTextTexture = theTextureManager->getTexture("");
+		tempTextTexture = theTextureManager->getTexture("GameOverTxt");
 		pos = { 300, 10, tempTextTexture->getTextureRect().w, tempTextTexture->getTextureRect().h };
 		tempTextTexture->renderTexture(theRenderer, tempTextTexture->getTexture(), &tempTextTexture->getTextureRect(), &pos, scale);
-		tempTextTexture = theTextureManager->getTexture("");
+		tempTextTexture = theTextureManager->getTexture("GameOver");
 		pos = { 300, 75, tempTextTexture->getTextureRect().w, tempTextTexture->getTextureRect().h };
 		tempTextTexture->renderTexture(theRenderer, tempTextTexture->getTexture(), &tempTextTexture->getTextureRect(), &pos, scale);
 		theButtonManager->getBtn("mainmenu_btn")->setSpritePos({ 500, 500 });
